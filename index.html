@@ -1,93 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IoT Health Monitoring System</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Additional styles */
-        .tile {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .tile h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .tile .value {
-            font-size: 32px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .tile .icon {
-            font-size: 40px;
-            color: #3498db;
-            margin-bottom: 15px;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 50px;
-        }
-    </style>
+    <title>IoT based Health Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="bg-black text-white">
-
-    <div class="flex justify-center items-center h-screen">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold mb-10">IoT Health Monitoring System</h1>
-            <div class="container">
-                <!-- Heart Rate Tile -->
-                <div class="tile">
-                    <div class="icon">❤️</div>
-                    <h2>Heart Rate</h2>
-                    <div class="value">75 bpm</div>
-                </div>
-                <!-- Blood Oxygen Level Tile -->
-                <div class="tile">
-                    <div class="icon">🩸</div>
-                    <h2>Blood Oxygen Levels</h2>
-                    <div class="value">98%</div>
-                </div>
-                <!-- Body Temperature Tile -->
-                <div class="tile">
-                    <div class="icon">🌡️</div>
-                    <h2>Body Temperature</h2>
-                    <div class="value">98.6°F</div>
-                </div>
-                <!-- Pulse Tile -->
-                <div class="tile">
-                    <div class="icon">💓</div>
-                    <h2>Pulse</h2>
-                    <div class="value">72 bpm</div>
-                </div>
-                <!-- Humidity Tile -->
-                <div class="tile">
-                    <div class="icon">💧</div>
-                    <h2>Humidity</h2>
-                    <div class="value">65%</div>
-                </div>
-                <!-- ECG Value Tile -->
-                <div class="tile">
-                    <div class="icon">📈</div>
-                    <h2>ECG Value</h2>
-                    <div class="value">Normal</div>
-                </div>
+<body>
+    <div class="container">
+        <h1>IoT based Health Monitoring System</h1>
+        
+        <div class="vital-signs">
+            <div class="tile" id="heart-rate">
+                <img src="heart-icon.png" alt="Heart Rate Icon" class="icon">
+                <p>Heart Rate</p>
+                <p class="value">75 bpm</p>
+            </div>
+            <div class="tile" id="blood-oxygen">
+                <img src="oxygen-icon.png" alt="Blood Oxygen Icon" class="icon">
+                <p>Blood Oxygen</p>
+                <p class="value">98%</p>
+            </div>
+            <div class="tile" id="body-temp">
+                <img src="temperature-icon.png" alt="Body Temperature Icon" class="icon">
+                <p>Body Temperature</p>
+                <p class="value">36.7°C</p>
+            </div>
+            <div class="tile" id="pulse">
+                <img src="pulse-icon.png" alt="Pulse Icon" class="icon">
+                <p>Pulse</p>
+                <p class="value">72 bpm</p>
+            </div>
+            <div class="tile" id="humidity">
+                <img src="humidity-icon.png" alt="Humidity Icon" class="icon">
+                <p>Humidity</p>
+                <p class="value">45%</p>
+            </div>
+            <div class="tile" id="ecg">
+                <img src="ecg-icon.png" alt="ECG Icon" class="icon">
+                <p>ECG Value</p>
+                <p class="value">Normal</p>
             </div>
         </div>
+
+        <div class="graph">
+            <h2>ECG Graph</h2>
+            <canvas id="ecg-graph"></canvas>
+        </div>
     </div>
-
 </body>
-
 </html>
