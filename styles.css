@@ -23,6 +23,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/* Patient and Doctor Info Tile - Styling Adjustments */
 .patient-info {
     background-color: white;
     padding: 15px;
@@ -33,6 +34,7 @@ h1 {
     text-align: left;
     max-width: 600px;
     margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
 }
 
 .patient-info p {
