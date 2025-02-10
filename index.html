@@ -9,8 +9,18 @@
 <body>
     <div class="container">
         <h1>IoT Based Health Monitoring System</h1>
-        
+
+        <!-- New Tile for Patient and Doctor Info -->
+        <div class="tile patient-info">
+            <p><strong>Patient:</strong> Galahad</p>
+            <p><strong>Age:</strong> 29</p>
+            <p><strong>Contact:</strong> +1234567890</p>
+            <p><strong>Doctor:</strong> Dr. Merlin</p>
+            <p><strong>Contact:</strong> +0987654321</p>
+        </div>
+
         <div class="vital-signs">
+            <!-- First Row Tiles -->
             <div class="tile">
                 <p class="icon">❤️</p>
                 <p>Heart Rate</p>
@@ -26,17 +36,19 @@
                 <p>Body Temperature</p>
                 <span id="temperature">37°C</span>
             </div>
-            <div class="tile">
+
+            <!-- Second Row Tiles (smaller) -->
+            <div class="tile smaller">
                 <p class="icon">💓</p>
                 <p>Pulse</p>
                 <span id="pulse">72 BPM</span>
             </div>
-            <div class="tile">
+            <div class="tile smaller">
                 <p class="icon">💧</p>
                 <p>Humidity</p>
                 <span id="humidity">45%</span>
             </div>
-            <div class="tile">
+            <div class="tile smaller">
                 <p class="icon">🖤</p>
                 <p>ECG Value</p>
                 <span id="ecg">Normal</span>
