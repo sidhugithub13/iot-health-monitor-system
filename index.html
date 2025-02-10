@@ -3,50 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IoT based Health Monitoring System</title>
-    <link rel="stylesheet" href="style.css">
+    <title>IoT Based Health Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>IoT based Health Monitoring System</h1>
+        <h1>IoT Based Health Monitoring System</h1>
         
         <div class="vital-signs">
-            <div class="tile" id="heart-rate">
-                <img src="heart-icon.png" alt="Heart Rate Icon" class="icon">
+            <div class="tile">
+                <img src="heart-icon.png" alt="Heart Rate" class="icon">
                 <p>Heart Rate</p>
-                <p class="value">75 bpm</p>
+                <span id="heart-rate">75 BPM</span>
             </div>
-            <div class="tile" id="blood-oxygen">
-                <img src="oxygen-icon.png" alt="Blood Oxygen Icon" class="icon">
-                <p>Blood Oxygen</p>
-                <p class="value">98%</p>
+            <div class="tile">
+                <img src="oxygen-icon.png" alt="Blood Oxygen Levels" class="icon">
+                <p>Blood Oxygen Levels</p>
+                <span id="blood-oxygen">98%</span>
             </div>
-            <div class="tile" id="body-temp">
-                <img src="temperature-icon.png" alt="Body Temperature Icon" class="icon">
+            <div class="tile">
+                <img src="temperature-icon.png" alt="Body Temperature" class="icon">
                 <p>Body Temperature</p>
-                <p class="value">36.7°C</p>
+                <span id="temperature">37°C</span>
             </div>
-            <div class="tile" id="pulse">
-                <img src="pulse-icon.png" alt="Pulse Icon" class="icon">
+            <div class="tile">
+                <img src="pulse-icon.png" alt="Pulse" class="icon">
                 <p>Pulse</p>
-                <p class="value">72 bpm</p>
+                <span id="pulse">72 BPM</span>
             </div>
-            <div class="tile" id="humidity">
-                <img src="humidity-icon.png" alt="Humidity Icon" class="icon">
+            <div class="tile">
+                <img src="humidity-icon.png" alt="Humidity" class="icon">
                 <p>Humidity</p>
-                <p class="value">45%</p>
+                <span id="humidity">45%</span>
             </div>
-            <div class="tile" id="ecg">
-                <img src="ecg-icon.png" alt="ECG Icon" class="icon">
+            <div class="tile">
+                <img src="ecg-icon.png" alt="ECG" class="icon">
                 <p>ECG Value</p>
-                <p class="value">Normal</p>
+                <span id="ecg">Normal</span>
+                <canvas id="ecg-graph"></canvas>
             </div>
-        </div>
-
-        <div class="graph">
-            <h2>ECG Graph</h2>
-            <canvas id="ecg-graph"></canvas>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
