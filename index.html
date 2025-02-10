@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT based Health Monitoring System</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Include Chart.js for ECG Graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>IoT based Health Monitoring System</h1>
+        <div class="vital-signs">
+            <div class="tile" id="heart-rate">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Heart Rate</h3>
+                <p>75 bpm</p>
+            </div>
+            <div class="tile" id="blood-oxygen">
+                <i class="fas fa-lungs"></i>
+                <h3>Blood Oxygen Levels</h3>
+                <p>98%</p>
+            </div>
+            <div class="tile" id="body-temp">
+                <i class="fas fa-thermometer-half"></i>
+                <h3>Body Temperature</h3>
+                <p>98.6°F</p>
+            </div>
+            <div class="tile" id="pulse">
+                <i class="fas fa-rhythm"></i>
+                <h3>Pulse</h3>
+                <p>72 bpm</p>
+            </div>
+            <div class="tile" id="humidity">
+                <i class="fas fa-tint"></i>
+                <h3>Humidity</h3>
+                <p>60%</p>
+            </div>
+            <div class="tile" id="ecg">
+                <i class="fas fa-heartbeat"></i>
+                <h3>ECG</h3>
+                <p>Normal</p>
+            </div>
+        </div>
+        <div id="graph">
+            <!-- ECG Graph -->
+            <h3>ECG Graph</h3>
+            <canvas id="ecgGraph" width="300" height="200"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // ECG Chart using Chart.js
+        const ctx = document.getElementById('ecgGraph').getContext('2d');
+        const ecgGraph = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'], // Time labels
+                datasets: [{
+                    label: 'ECG Value',
+                    data: [0, 1, 0, -1, 0, 1, 0, -1, 0, 1], // Sample ECG data (sine wave)
+                    borderColor: 'rgb(75, 192, 192)',
+                    fill: false,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        min: -1.5,
+                        max: 1.5
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
