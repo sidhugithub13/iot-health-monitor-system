@@ -1,80 +1,39 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// Create dummy ECG data for graph
+const ctx = document.getElementById('ecg-graph').getContext('2d');
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #141414;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    text-align: center;
-}
+const data = {
+    labels: Array.from({ length: 50 }, (_, i) => i),
+    datasets: [{
+        label: 'ECG Signal',
+        data: Array.from({ length: 50 }, () => Math.sin(Math.random() * Math.PI * 2) * 5 + 10),
+        borderColor: 'rgb(75, 192, 192)',
+        fill: false,
+        tension: 0.1
+    }]
+};
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-}
-
-h1 {
-    font-size: 36px;
-    margin-top: 50px;
-    margin-bottom: 40px;
-}
-
-.patient-details {
-    margin-bottom: 40px;
-}
-
-.tile {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.patient-details .tile {
-    text-align: left;
-    width: 100%;
-}
-
-.vital-signs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.value {
-    font-size: 18px;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.graph {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-canvas {
-    width: 100%;
-    height: 350px;
-    background-color: #222;
-    border: 1px solid #444;
-    border-radius: 10px;
-}
-
-/* Adjust layout for smaller screens */
-@media (max-width: 768px) {
-    .vital-signs {
-        grid-template-columns: 1fr 1fr;
+const config = {
+    type: 'line',
+    data: data,
+    options: {
+        responsive: true,
+        scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Time'
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'ECG Value'
+                },
+                min: 0,
+                max: 20
+            }
+        }
     }
-}
+};
+
+const ecgChart = new Chart(ctx, config);
