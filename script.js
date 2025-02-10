@@ -1,39 +1,26 @@
-// Create dummy ECG data for graph
-const ctx = document.getElementById('ecg-graph').getContext('2d');
-
-const data = {
-    labels: Array.from({ length: 50 }, (_, i) => i),
-    datasets: [{
-        label: 'ECG Signal',
-        data: Array.from({ length: 50 }, () => Math.sin(Math.random() * Math.PI * 2) * 5 + 10),
-        borderColor: 'rgb(75, 192, 192)',
-        fill: false,
-        tension: 0.1
-    }]
-};
-
-const config = {
-    type: 'line',
-    data: data,
-    options: {
-        responsive: true,
-        scales: {
-            x: {
-                title: {
-                    display: true,
-                    text: 'Time'
-                }
-            },
-            y: {
-                title: {
-                    display: true,
-                    text: 'ECG Value'
-                },
-                min: 0,
-                max: 20
-            }
+window.onload = function() {
+    // ECG Graph simulation using canvas
+    var canvas = document.getElementById('ecg-graph');
+    var ctx = canvas.getContext('2d');
+    
+    // Function to simulate ECG graph with a sine wave
+    function drawECG() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+        
+        var time = Date.now() / 1000;
+        var amplitude = 30;
+        var frequency = 2;
+        var phase = time * frequency;
+        
+        ctx.beginPath();
+        for (let x = 0; x < canvas.width; x++) {
+            let y = Math.sin(x * 0.05 + phase) * amplitude + 70;
+            ctx.lineTo(x, y);
         }
+        ctx.strokeStyle = "#00FF00";  // Green color for the ECG
+        ctx.stroke();
     }
+    
+    // Set interval for ECG simulation
+    setInterval(drawECG, 100);
 };
-
-const ecgChart = new Chart(ctx, config);
