@@ -23,16 +23,17 @@ h1 {
     margin-bottom: 1rem;
 }
 
-/* Patient and Doctor Info Tile - Styling Adjustments */
+/* Adjusted Patient and Doctor Info Tile */
 .patient-info {
     background-color: white;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 20px;
     border-radius: 8px;
     color: black;
-    font-size: 0.9rem;
+    font-size: 0.85rem;  /* Reduced font size */
     text-align: left;
-    max-width: 600px;
+    width: 100%;
+    max-width: 500px;  /* Reduced width to prevent overlap */
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
 }
