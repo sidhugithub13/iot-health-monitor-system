@@ -13,7 +13,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px;
+    padding: 0;
+    position: relative; /* Set position relative for absolute title positioning */
 }
 
 h1 {
@@ -49,7 +50,8 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     max-width: 900px;
-    margin: 20px auto;  /* Space between title and tiles */
+    margin-top: 60px;  /* Ensure space between title and tiles */
+    margin: 0 auto;
 }
 
 .tile {
