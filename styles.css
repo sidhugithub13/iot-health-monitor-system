@@ -20,7 +20,23 @@ body {
 
 h1 {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.patient-info {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: black;
+    font-size: 0.9rem;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.patient-info p {
+    margin: 5px 0;
 }
 
 .vital-signs {
@@ -47,6 +63,10 @@ h1 {
 .icon {
     font-size: 2rem; /* Adjust size of emojis */
     margin-bottom: 5px;
+}
+
+.smaller {
+    font-size: 0.85rem; /* Reduced size for the bottom row tiles */
 }
 
 #ecg-graph {
