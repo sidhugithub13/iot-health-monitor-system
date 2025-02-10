@@ -50,7 +50,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     max-width: 900px;
-    margin-top: 60px;  /* Ensure space between title and tiles */
+    margin-top: 100px;  /* Increased gap between title and tiles */
     margin: 0 auto;
 }
 
