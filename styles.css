@@ -10,30 +10,33 @@ body {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;  /* Align items to the top */
     height: 100vh;
+    padding: 20px;
 }
 
 .container {
     text-align: center;
+    width: 100%;
+    max-width: 1000px; /* Limit the width to prevent it from stretching too far */
 }
 
 h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;  /* Reduce margin to bring it closer to patient info tile */
 }
 
 /* Adjusted Patient and Doctor Info Tile */
 .patient-info {
     background-color: white;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;  /* Reduced bottom margin */
     border-radius: 8px;
     color: black;
-    font-size: 0.8rem;  /* Further reduced font size */
+    font-size: 0.8rem;  /* Font size reduced to match the first row */
     text-align: left;
-    width: 90%;  /* Set width to 90% to make it proportionate */
-    max-width: 400px;  /* Further reduce the width to align with first row tiles */
+    width: 90%;  /* Proportional width */
+    max-width: 400px;  /* Keep the width reduced */
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
 }
