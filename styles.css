@@ -8,10 +8,6 @@ body {
     background-color: black;
     font-family: Arial, sans-serif;
     color: white;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     padding: 0;
     position: relative; /* Set position relative for absolute title positioning */
@@ -26,19 +22,30 @@ h1 {
     transform: translateX(-50%); /* Center the title horizontally */
 }
 
+/* Container for vital signs and patient info tiles */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;  /* Substantial gap between title and tiles */
+    position: relative;
+    width: 100%;
+}
+
 /* Adjusted Patient and Doctor Info Tile */
 .patient-info {
     background-color: white;
-    padding: 10px;
-    margin-bottom: 20px;  /* Reduced bottom margin */
+    padding: 8px;
+    margin-bottom: 20px;
     border-radius: 8px;
     color: black;
-    font-size: 0.8rem;  /* Font size reduced to match the first row */
+    font-size: 0.7rem;  /* Reduced font size */
     text-align: left;
-    width: 90%;  /* Proportional width */
-    max-width: 400px;  /* Keep the width reduced */
+    width: 85%;  /* Reduced width */
+    max-width: 350px;  /* Smaller width */
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .patient-info p {
@@ -49,18 +56,17 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    max-width: 900px;
-    margin-top: 100px;  /* Increased gap between title and tiles */
-    margin: 0 auto;
+    max-width: 800px;  /* Reduced max width */
+    margin-top: 20px;
 }
 
 .tile {
     background-color: white;
-    padding: 15px;
+    padding: 12px;  /* Reduced padding */
     border-radius: 8px;
     color: black;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;  /* Reduced font size */
 }
 
 .tile p {
@@ -68,18 +74,18 @@ h1 {
 }
 
 .icon {
-    font-size: 2rem; /* Adjust size of emojis */
+    font-size: 1.5rem;  /* Reduced size of the emojis */
     margin-bottom: 5px;
 }
 
 .smaller {
-    font-size: 0.85rem; /* Reduced size for the bottom row tiles */
+    font-size: 0.85rem;
 }
 
 #ecg-graph {
     width: 100%;
     height: 100px;
     border: 1px solid #ddd;
-    background-color: white; /* Set the ECG graph background to white */
+    background-color: white;
     margin-top: 10px;
 }
