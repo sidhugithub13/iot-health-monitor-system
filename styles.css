@@ -9,21 +9,20 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
     justify-content: center;
-    align-items: flex-start;  /* Align items to the top */
+    align-items: center;
     height: 100vh;
     padding: 20px;
 }
 
-.container {
-    text-align: center;
-    width: 100%;
-    max-width: 1000px; /* Limit the width to prevent it from stretching too far */
-}
-
 h1 {
     font-size: 2rem;
-    margin-bottom: 15px;  /* Reduce margin to bring it closer to patient info tile */
+    margin-bottom: 20px;  /* Add space below the title */
+    position: absolute;
+    top: 20px;  /* Position the title at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
 }
 
 /* Adjusted Patient and Doctor Info Tile */
@@ -50,7 +49,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;  /* Space between title and tiles */
 }
 
 .tile {
