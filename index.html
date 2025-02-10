@@ -3,45 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IoT Based Health Monitoring System</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>IoT Health Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>IoT Based Health Monitoring System</h1>
-        
+        <h1>IoT Health Monitoring System</h1>
+
+        <div class="patient-details">
+            <div class="tile">
+                <h3>Patient Details</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Age:</strong> 45</p>
+                <p><strong>Address:</strong> 123 Main St, City</p>
+                <p><strong>Contact:</strong> +123 456 7890</p>
+
+                <h4>Doctor's Details</h4>
+                <p><strong>Doctor:</strong> Dr. Alice Smith</p>
+                <p><strong>Contact:</strong> +987 654 3210</p>
+                <p><strong>Hospital:</strong> City Medical Center</p>
+            </div>
+        </div>
+
         <div class="vital-signs">
             <div class="tile">
-                <img src="heart-icon.png" alt="Heart Rate" class="icon">
-                <p>Heart Rate</p>
-                <span id="heart-rate">75 BPM</span>
+                <p><strong>Heart Rate</strong></p>
+                <p class="value">75 bpm</p>
             </div>
             <div class="tile">
-                <img src="oxygen-icon.png" alt="Blood Oxygen Levels" class="icon">
-                <p>Blood Oxygen Levels</p>
-                <span id="blood-oxygen">98%</span>
+                <p><strong>Blood Oxygen</strong></p>
+                <p class="value">98%</p>
             </div>
             <div class="tile">
-                <img src="temperature-icon.png" alt="Body Temperature" class="icon">
-                <p>Body Temperature</p>
-                <span id="temperature">37°C</span>
+                <p><strong>Humidity</strong></p>
+                <p class="value">45%</p>
             </div>
             <div class="tile">
-                <img src="pulse-icon.png" alt="Pulse" class="icon">
-                <p>Pulse</p>
-                <span id="pulse">72 BPM</span>
+                <p><strong>Body Temperature</strong></p>
+                <p class="value">36.7°C</p>
             </div>
             <div class="tile">
-                <img src="humidity-icon.png" alt="Humidity" class="icon">
-                <p>Humidity</p>
-                <span id="humidity">45%</span>
+                <p><strong>ECG Value</strong></p>
+                <p class="value">Normal</p>
             </div>
-            <div class="tile">
-                <img src="ecg-icon.png" alt="ECG" class="icon">
-                <p>ECG Value</p>
-                <span id="ecg">Normal</span>
-                <canvas id="ecg-graph"></canvas>
-            </div>
+        </div>
+
+        <div class="graph">
+            <h2>ECG Graph</h2>
+            <canvas id="ecg-graph"></canvas>
         </div>
     </div>
 
